@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  .wrapper{
+    display:flex;
+    height: max (calc(100vh - 45px) , auto);
+    }
+
+    .sidebar {
+      width: 300px;
+      background: #333238;
+      flex: 1;
+      height: auto;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap:30px;
+      color: #cbcace;
+      font-size: 40px;
+      margin: 0px;
+      border: 0px;
+      }
+
+      .sidebar label{
+        color: #cbcace;
+        font-size: 25px;
+        margin: 10px;
+      }
+
+      .sidebar #name,
+      .sidebar #expenseName,
+      .sidebar #amount{
+        /*outline: none;*/
+        border: none;
+        resize: none;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 7px;
+        background-color: #f3f4f6;
+        font-weight: bolder;
+        width: 225px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        color: #333238;
+        white-space: pre-line;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      }
+
+      .sidebar select{
+        /*outline: none;*/
+        border: none;
+        resize: none;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 7px;
+        background-color: #f3f4f6;
+        font-weight: bolder;
+        width: 225px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        color: #333238;
+        white-space: pre-line;
+      }
+
+      /* CSS */
+      .button-33 {
+        background-color: #f3f4f6;
+        border-radius: 100px;
+        color: #333238;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 20px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 180px;
+        flex: initial;
+        margin-bottom: 50px;
+      }
+
+      .button-33:hover {
+        box-shadow: #333238;
+        transform: scale(1.15);
+      }
+
+
+  
+    .header {
+      height: 60px;
+      background: white;
+      color: #6f6f6f;
+      flex: 0 1 auto;
+      font-size: 30px;
+      font-weight: bolder;
+      padding-left: 20px;
+      display:flex;
+      align-items: center;
+    }
+  
+    .content{
+      flex:auto;
+      display:flex;
+      flex-direction: column;
+    }
+
+
+     #cards{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 20px;
+        background-color: #e1def0;
+        height: auto;
+        align-content: flex-start;
+      }
+
+      .card {
+        border: 1px solid #eee;
+        box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+        border-radius: 4px;
+        flex:0 1 200px;
+        padding: 5px;
+        width: auto;
+        height: 110px;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+        .card .bookImg{
+          height: 20px;
+        }
+
+        .card .personName{
+          font-size: 20px;
+          font-family: 'Open Sans' , sans-serif;
+          font-weight: bold;
+        }
+
+        .card .personName::first-line{
+          font-size: 25px;
+          font-weight: bolder;
+        }
+
+        .card .options{
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          align-items: center;
+        }
+
+        .options .askread{
+         margin-left: -40px;
+         font-weight:500;
+        }
+
+        .options button {
+          line-height: 1;
+          position: relative;
+          border: .1em solid;
+          padding: 0.2em;
+          color: #e1def0;
+          border-radius: 5px;
+          background: transparent;
+          border-radius: .125em;
+          cursor: pointer;
+          
+        }
+        .options button:hover,
+        .options button:focus {
+              color: white;
+              background: lightgrey;
+              border-color: lightgrey;
+          }
+          
+          .options button:active {
+              top: .08em;
+          }
+      
+      
+      .deleteIcon {
+          /* Place the icon on the text baseline. */
+          position: relative;
+          top: .125em;
+      
+          /* Prevent the icon from shrinking inside a flex container. */
+          flex-shrink: 0;
+      
+          /* Scale the icon to match the font-size of the parent element. */
+          height: 3em;
+          width: 3em;
+      
+          /* Let the icon take whatever color the parent has. */
+          fill: currentColor;
+      
+          /*
+           * If the icon is used on a link, which has a color transition,
+           * we can also use a transition on the fill value.
+          */
+         transition: fill .3s;
+      }
+      
+      /* Helper Class to hide text visually but keep it accessible for screen reader or other assistive software. */
+      .visually-hidden {
+          /* // Move the text out of the flow of the container. */
+          position: absolute;
+          
+          /* // Reduce its height and width to just one pixel. */
+          height: 1px;
+          width: 1px;
+          
+          /* // Hide any overflowing elements or text. */
+          overflow: hidden;
+          
+          /* // Clip the box to zero pixels. */
+          clip: rect(0, 0, 0, 0);
+          
+          /* // Text won't wrap to a second line. */
+          white-space: nowrap;
+      }
+    
+ .footer {
+    height: 45px;
+    background: #eee;
+    color: darkmagenta;
+    flex: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position:relative; */
+    bottom:0;
+    }

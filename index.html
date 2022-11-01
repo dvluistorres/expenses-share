@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money homei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <fieldset id="personSidebar" class="sidebar">
+        <p>Add Person</p>
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Diomedes" name="name">
+            </div>
+            <div>
+                <label for="isDependent">Is dependent?:</label>
+                <input type="checkbox" value="isDependent" id="isDependent" name="isDependent">
+            </div>
+            <div id="dependentForm" style="display: none;">
+                <label id="dependentFromLabel" for="dependentFrom">Dependent from?:</label>
+                <select id="dependentFrom" name="dependentFrom">
+                </select>
+            </div>
+            <button id="addButton" onclick="addPerson()" class="button-33" >Add person</button>
+            <button id="sidebarButton" onclick="toggleToExpenses()" class="button-33" ><b>Add Expenses</b></button>
+     </fieldset>
+     <fieldset id="expensesSidebar" class="sidebar" style="display: none;">
+        <p>Add Expense</p>
+            <div>
+                <label for="expenseName">Expense:</label>
+                <input type="text" id="expenseName" value="Aguilas" name="expenseName">
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" value="100000" name="amount">
+            </div>
+            <div>
+                <label for="whoPaid">Who paid?:</label>
+                <select id="whoPaid" name="whoPaid">
+                </select>
+            </div>
+            <div>
+                <label for="allPeoplePay">All people pay the same?</label>
+                <input type="checkbox" value="allPeoplePay" id="allPeoplePay" name="allPeoplePay" checked="true">
+            </div>
+            <div id="sharersOptions" style="display: block;">
+                <label id="sharersLabel" for="sharersLabel">How much pays everyone?</label>
+                <ol id="sharers" name="sharers">
+                </ol>
+            </div>
+            <button id="addButton" onclick="addExpense()" class="button-33" >Add Expense</button>
+            <button id="sidebarButton" onclick="toggleToExpenses()" class="button-33" ><b>Add Person</b></button>
+     </fieldset>
+    <div class="content">
+        <div class="header">
+            EXPENSES SHARE
+        </div>
+        <div id="cards">
+        </div>
+        <div>Shared Expenses</div>
+        <table id="sharedTable">
+            <tr>
+                <th>Expense</th>
+                <th>Amount</th>
+                <th>Who paid?</th>
+                <th>Divided</th>
+            </tr>
+        </table>
+        <br>
+        <div>Unshared Expenses</div>
+        <table id="unsharedTable">
+            <tr id="unsharedTableNames">
+                <th>Expense</th>
+                <th>Amount</th>
+                <th>Who paid?</th>
+            </tr>
+        </table>
+        <div>Resume</div>
+        <table id="liquidationTable">
+            <tr id="liquidationNames">
+                <th>Name</th>
+            </tr>
+            <tr id="liquidationTotal">
+                <td>Total</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div class="footer">
+            The Odin Project ❤️
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
